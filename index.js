@@ -220,7 +220,7 @@ Use the getRandomFlavors function and new arrays below to do the following:
 
 
 function getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) {
-    const combinedFlavors = Array.from(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors);
+    const combinedFlavors = originalFlavors.concat(newFlavors, seasonalFlavors, regionalFlavors);
     const randomizedFlavors = [];
     for (let i = 0; i < 31; i++) {
         let randomFlavor = combinedFlavors[Math.floor(Math.random() * combinedFlavors.length)];
